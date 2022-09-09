@@ -1,0 +1,19 @@
+/* MAPS */
+$mapRedes:(facebook:#FFCCFF, instagram:#330000  , Whatsapp:#99CC00  );
+
+@each $redSocial, $color in $mapRedes {
+    .#{$redSocial}{
+        color:$color;    
+    }
+    
+}
+
+/* MAP - GET */
+
+$estilo: (color:#33FF33 , align:left);
+
+.encabezado{
+    background-color: map-get($estilo , color );
+    background-position: map-get($estilo , align );
+    
+}
